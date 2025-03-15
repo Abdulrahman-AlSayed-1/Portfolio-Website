@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar{width: 8px; background: #414141;}
+::-webkit-scrollbar-thumb{background-color: rgb(12, 11, 11)}
+.icon
+{
+    border: grey 1px solid;
+    border-radius: 50%;
+    width: 50px;
+    height:50px;
+    position: relative;
+    transition: all 500ms;
+    color: #C0C0C0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon::before
+{
+    position: absolute;
+    content: "";
+    inset: 50% 0 0 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: all 500ms;
+    border-radius: 50%;
+    z-index: -1;
+}
+.icon:hover::before
+{
+    width: 100%;
+    height: 100%;
+}
+.icon:hover , .contact-btn:hover{color: black !important;}
+.nav-link{cursor: pointer;}
+
+.scroll-link::after{
+    position: absolute;
+    content: "";
+    bottom: 5px;
+    left:0.5rem;
+    width: calc(100% - 1rem);
+    height: 2px;
+    border-radius: 5px;
+    transform: scaleX(0);
+    background-color: white;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+.contact-btn::after
+{
+    position: absolute;
+    content: "";
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    background-color: white;
+    transform-origin: left;
+    transition: transform 0.5s;
+    z-index: -1;
+}
+.scroll-link:hover::after, .contact-btn:hover::after
+{
+    transform: scaleX(1);
+}
+
+ #Home{padding-bottom: 100px;}
+
+ #mainImage
+ {
+    animation: move 6s linear infinite normal;
+ }
+ 
+ @keyframes move{
+    0%{transform:  translateY(0);}
+    50%{ transform: translateY(10%)}
+ }
+ #Skills > div{
+     background-image: url(../Images/skillsImage.jpeg);
+     background-position: center;
+     border: 1px solid grey;
+     box-shadow: 4px 4px 50px 0px rgb(60, 60, 60);
+    }
+ #Skills > div > p , #Projects > p 
+ {
+    -webkit-text-stroke: 1px rgb(181, 178, 178);
+    color: transparent;
+ }   
+ .arrow:hover{opacity: 0.7;}
+ .arrow:active{opacity: 0.4;}
+
+.slick-prev:before, .slick-next:before
+ {content: "" !important;}
+
+  .fa-circle-notch
+ {
+    transform: rotateZ(40deg);
+    -webkit-text-fill-color: transparent ;
+    -webkit-background-clip:text !important;   
+     background-clip: text !important;     
+    background:linear-gradient( rgb(3, 3, 52) 45%, rgb(12, 19, 115) 65%);
+    position: relative;
+ } 
+ .fa-circle-notch::after
+ {
+    position: absolute;
+    content: attr(data-ratio);
+    background-color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-fill-color: transparent ;
+    -webkit-background-clip:text !important;
+    background-clip: text !important;     
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(-40deg);
+ }
+
+ .nav-pills .nav-link:hover
+ {
+     background-color: rgb(8, 8, 8) !important;
+     color: antiquewhite !important;
+ }
+ .Active-link{
+    background-color: #C0C0C0 ;
+    color:#0e1011 !important;
+ }
+#gallery
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.project::after
+{
+   background-color: rgba(0,0,0 ,0.7);
+   color: #C0C0C0;
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 0;
+   transition: height 600ms ease-in-out ;
+   z-index: 1;
+
+}
+.project:hover::after
+{
+    height: 100%;
+}
+.desc{
+    transform: translate(-50%,50%);
+    transition: all 600ms ease-in-out ;
+    z-index: 2;
+    color: antiquewhite;
+    letter-spacing: 3px;
+    font-optical-sizing: auto;
+    font: italic 600 2rem "Exo", sans-serif;
+    text-transform: uppercase;
+}    
+
+.project:hover .desc
+{
+    transform: translate(-50%,-50%);
+    opacity: 1 !important;
+    transition-delay: 600ms;
+    
+}
+form
+{
+ display: grid;
+ grid-template-areas: 
+   "firstName lastName"
+   "email phoneNo"
+   "message message"  ;
+ grid-template-columns:repeat(2, minmax(45%,1fr));
+ gap: 10px;
+}
+form>input:first-child
+{
+    grid-area: firstName;
+}
+form>input:nth-child(2)
+{
+    grid-area: lastName;
+}
+form>input:nth-child(3)
+{
+    grid-area: email;
+}
+form>input:nth-child(4)
+{
+    grid-area: phoneNo;
+}
+form>textarea
+{
+    grid-area: message;
+    resize: none;
+}
+form ~ input:hover 
+{
+   opacity:0.8
+}
+form ~ input:active 
+{
+   opacity:0.5
+}
+form >*, #EmailViewer input
+{
+    outline: none;
+    color: #C0C0C0;
+    transition: all 500ms ;
+}
+form >*::placeholder ,#EmailViewer input::placeholder{color: #C0C0C0;}
+form>*:focus{background-color: #C0C0C0 !important; color: #212529; }
+form>*:focus::placeholder{color: #212529;}
+
+#EmailViewer
+{
+    background-color:#C0C0C0;
+    transition: all 500ms ;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+#EmailViewer input
+{
+    background-color: #212529;
+    padding-right: 36%;
+}
+
+#EmailViewer input:focus
+{
+    background-color: #C0C0C0;
+    color: #212529;
+}
+#EmailViewer input:focus::placeholder
+{
+    color: #212529;
+}
+#emailViewerInputDiv button
+{
+    position: absolute;
+    text-align: center;
+    inset: 8px 7px 8px 65%;
+    background-color: rgb(214, 130, 21);
+    color:#212529;
+    border-radius: 1rem;
+    font-weight: 800;
+}
+#emailViewerInputDiv button:hover
+{
+   background-color: rgba(214, 130, 21, 0.8)
+}
+#emailViewerInputDiv button:active
+{
+    background-color: rgba(214, 130, 21, 0.5)
+}
+@media screen and (max-width: 1000px)  /* medium screens*/
+{
+   #gallery{
+      grid-template-rows: repeat(3,auto);
+      grid-template-columns: repeat(2,1fr);
+   }
+   .homeContainer
+   {
+     height: 60vh !important;
+   }
+}
+@media screen and (max-width: 767px)    /* small screens*/
+{
+    .scroll-link
+    {
+        width: fit-content;
+    }
+    .scroll-link::after
+    {
+        left: 0;
+        width: 100%; ;
+    } 
+    #gallery{
+       grid-template-rows: repeat(6,auto);
+       grid-template-columns: 1fr; 
+    }
+    .homeContainer
+    {
+      height: 100vh !important;
+    }
+    .nav-pills > li:first-child .nav-link{
+       border-radius: 3rem 3rem 0 0 !important;
+    ;} 
+    .nav-pills > li:last-child .nav-link{
+        border-radius: 0 0 3rem 3rem !important ;
+     ;} 
+     #footer{ height: 100vh !important;}
+     .icon{width: 40px; height: 40px;}
+
+}
+@media screen and (min-width: 768px)  /* meduim and large screens*/
+{
+   #Home > div > div:first-child
+   {top: 55% !important;}
+}
