@@ -8,7 +8,7 @@ import AboutMe from "./Components/AboutMe";
 
 const Routers = () => {
     return (
-        <Router basename="/Project5-React">
+        <Router>
             <Header />
             <Routes>
                <Route path="/" element ={<Main/>} >
