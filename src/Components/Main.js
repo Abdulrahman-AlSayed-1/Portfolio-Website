@@ -13,7 +13,7 @@ function Main() {
    const addEmail=(getInTouchEmail)=>{
      setEmail(getInTouchEmail)
    }
-   
+  
     return ( 
         <>
          <Home />

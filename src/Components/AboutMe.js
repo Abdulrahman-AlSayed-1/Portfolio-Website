@@ -1,7 +1,9 @@
+import { responsive } from "./Skills";
+
 function AboutMe() {
     return ( 
         <div id="AboutMe" className="mt-5 container-fluid">
-            <p style={{fontStyle:"italic"}} className="fs-5 text-secondary col-md-6 col-11 mx-auto text-center">
+            <p style={{fontStyle:"italic"}} className={`fs-${responsive(6,5)} text-secondary col-md-6 col-11 mx-auto text-center`}>
                 Hello , My name is&nbsp;
                 <span className="badge bg-dark text-light">
                     Abdulrahman Hani Al-Sayed

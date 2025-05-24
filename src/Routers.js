@@ -8,13 +8,13 @@ import AboutMe from "./Components/AboutMe";
 
 const Routers = () => {
     return (
-        <Router>
+        <Router basename="/Project5-React">
             <Header />
             <Routes>
-               <Route path="/project5-React" element ={<Main/>} >
+               <Route path="/" element ={<Main/>} >
                  <Route index element={<ProjectsGallery/>}/>    
-                 <Route path="GetInTouch" element ={<GetInTouch/>}>
-                    <Route path="AboutMe" element ={<AboutMe/>}/>
+                 <Route path="getInTouch" element ={<GetInTouch/>}>
+                    <Route path="aboutMe" element ={<AboutMe/>}/>
                  </Route>
                </Route>
                <Route path='*' element ={<NotFound404/>}/>

@@ -20,7 +20,7 @@ function Footer() {
                       </li>
                       <li className="nav-item">
                          <a className="nav-link icon" href='https://github.com/Abdulrahman-AlSayed-1' target='_blank' rel='noopener noreferrer'>
-                           <i class="fab fa-github"></i>
+                           <i className="fab fa-github"></i>
                          </a>
                       </li>
                       <li className="nav-item">

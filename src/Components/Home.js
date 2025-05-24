@@ -1,5 +1,5 @@
 // Desc: Home component of the website
-import image from '../Images/Lamp2.jpeg';
+import image from '../Images/Lamp.jpeg';
 import {ReactTyped} from 'react-typed';
 
 function Home() {

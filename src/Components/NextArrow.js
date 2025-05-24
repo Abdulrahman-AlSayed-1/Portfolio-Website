@@ -5,7 +5,7 @@ function NextArrow({className,style, onClick}) {
            className={className} >
           <div className="d-flex arrow border text-light rounded-circle
            justify-content-center align-items-center" style={{height:"40px",width:'40px'}}>
-            <i className="bi bi-chevron-right fs-4 "></i> 
+            <i className="bi bi-chevron-right fs-5"></i> 
           </div>
       </div>
       );

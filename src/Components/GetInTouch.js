@@ -19,7 +19,7 @@ function GetInTouch() {
                   <img className='img-fluid'  src={formImage} alt="Form Image" />
                 </div>
                 <div className="col-md-6 d-flex flex-column pt-5 ">
-                    <h1 className={`display-${responsive(6,5)} mx-md-0 mx-auto pb-2`} style={{letterSpacing:"2px", color:"antiquewhite"}}>
+                    <h1 className={`display-${responsive(6,5)} mx-md-0 mx-auto pb-2`} style={{letterSpacing:"-4px", color:" rgb(214, 130, 21)"}}>
                         Get In Touch
                     </h1>
                    
@@ -30,7 +30,7 @@ function GetInTouch() {
                        <input className='pb-4 pt-2 ps-3 rounded-4 bg-dark border-0' type="number" placeholder='Phone No.'/>
                        <textarea className='pb-4 pt-2 ps-3 rounded-4 bg-dark border-0'  placeholder='Message'/>
                    </form>
-                   <input className='col-md-4 col-6 mx-md-0 mx-auto btn btn-light mt-4 rounded-3 fs-5 fw-bold' value='Send' type="button" />
+                   <input className='col-md-4 col-lg-3 col-5 mx-md-0 mx-auto btn btn-light mt-4 rounded-3 fs-5 fw-bold' value='Send' type="button" />
                 
                 </div>
             </div>
