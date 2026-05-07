@@ -43,7 +43,7 @@ I am a passionate **Java Full-Stack Developer** currently pursuing my B.Sc. in C
 ### 📫 Let's Connect!
 - 💼 **LinkedIn**: [linkedin.com/in/abdulrahmanal-sayed](https://linkedin.com/in/abdulrahmanal-sayed)
 - 📧 **Email**: [alsayed.04@icloud.com](mailto:alsayed.04@icloud.com)
-- 🌍 **Portfolio**: [Visit My Live Site]((https://portfolio-website-abdulrahman-alsayed-1.vercel.app/))
+- 🌍 **Portfolio**: [Visit My Live Site](https://portfolio-website-abdulrahman-alsayed-1.vercel.app)
 
 ---
 <p align="center">
