@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --accent-glow: rgba(108, 99, 255, 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0a0a0f] text-[#e8e8f0] font-body antialiased selection:bg-accent/30;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-primary text-white font-semibold text-sm rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(108,99,255,0.3)];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-transparent text-[#e8e8f0] font-semibold text-sm rounded-lg border border-white/10 transition-all duration-300 hover:border-accent hover:bg-accent/5 hover:-translate-y-1;
+  }
+
+  .glass-card {
+    @apply bg-card border border-white/5 rounded-2xl p-8 transition-all duration-300 hover:border-accent/30 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40;
+  }
+
+  .animate-in {
+    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
+  }
+
+  .animate-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Custom animations not easily handled by pure Tailwind */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-bg-orb {
+  @apply absolute rounded-full blur-[100px] opacity-15 pointer-events-none;
+}
+
+.nav-links.active {
+  @apply flex flex-col absolute top-full left-0 right-0 bg-[#0a0a0f]/95 backdrop-blur-xl p-6 border-b border-white/5 gap-5;
+}
